@@ -13,7 +13,7 @@ fixedx = None
 fixedy = None
 rec = None
 with mp_hands.Hands(min_detection_confidence=0.5, min_tracking_confidence=0.5) as hands:
-    with mp_holistic.Holistic(min_detection_confidence=0.5,min_tracking_confidence=0.5,upper_body_only=True) as holistic:
+    with mp_holistic.Holistic(min_detection_confidence=0.5,min_tracking_confidence=0.5) as holistic:
         while True:
             success, frame = cap.read()
             frame = cv2.flip(frame, 1)
